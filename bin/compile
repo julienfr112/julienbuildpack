@@ -7,4 +7,4 @@ mkdir -p vendor/mupdf
 tar -C vendor/mupdf -xvf mupdf.tar.gz
 rm mupdf.tar.gz
 
-curl https://transfer.sh/LoPeV/cv2.so
+curl https://transfer.sh/LoPeV/cv2.so -O -s
