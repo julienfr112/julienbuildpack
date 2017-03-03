@@ -7,6 +7,6 @@ mkdir -p vendor/mupdf
 tar -C vendor/mupdf -xvf mupdf.tar.gz
 rm mupdf.tar.gz
 
-curl https://transfer.sh/UOm2F/opencv.tar.gz
+curl https://transfer.sh/UOm2F/opencv.tar.gz -O
 tar -C vendor/mupdf -xvf opencv.tar.gz
 rm opencv.tar.gz
