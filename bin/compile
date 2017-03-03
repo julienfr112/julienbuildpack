@@ -4,9 +4,10 @@ cd $1
 # download the binary (-O) silently (-s)
 curl https://transfer.sh/kmsww/mupdf.tar.gz -O -s
 mkdir -p vendor/mupdf
-tar -C vendor/mupdf -xvf mupdf.tar.gz
+tar -C vendor/mupdf -xf mupdf.tar.gz
 rm mupdf.tar.gz
 
 curl https://transfer.sh/UOm2F/opencv.tar.gz -O
-tar -C vendor/opencv -xvf opencv.tar.gz
+mkdir -p vendor/opencv
+tar -C vendor/opencv -xf opencv.tar.gz
 rm opencv.tar.gz
