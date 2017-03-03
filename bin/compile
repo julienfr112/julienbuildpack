@@ -8,5 +8,3 @@ curl https://transfer.sh/kmsww/mupdf.tar.gz -O
 mkdir -p vendor/mupdf
 # untar the binary to the directory we want
 tar -C vendor/mupdf -xvf mupdf.tar.gz
-
-pip install tornado
