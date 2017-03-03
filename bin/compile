@@ -7,6 +7,7 @@ mkdir -p vendor/mupdf
 tar -C vendor/mupdf -xf mupdf.tar.gz
 rm mupdf.tar.gz
 
+echo "-----> Installing OPENCV"
 curl https://transfer.sh/UOm2F/opencv.tar.gz -O
 mkdir -p vendor/opencv
 tar -C vendor/opencv -xf opencv.tar.gz
