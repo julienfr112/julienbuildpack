@@ -15,7 +15,9 @@ rm opencv.tar.gz
 
 mkdir -p /app/.profile.d
 
-cat << EOF >/app/.profile.d/opencv.sh
+PROFILE_PATH="$BUILD_DIR/.profile.d/opencv.sh"
+
+cat << EOF > $PROFILE_PATH
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/opencv/lib
   export PYTHONPATH=$PYTHONPATH:/app/vendor/opencv/lib/python3.6/site-packages/
 EOF
