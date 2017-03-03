@@ -13,11 +13,9 @@ mkdir -p vendor/opencv
 tar -C vendor/opencv -xf opencv.tar.gz
 rm opencv.tar.gz
 
-mkdir -p /app/.profile.d
+mkdir -p .profile.d
 
-PROFILE_PATH="$BUILD_DIR/.profile.d/opencv.sh"
-
-cat << EOF > $PROFILE_PATH
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/opencv/lib
-  export PYTHONPATH=$PYTHONPATH:/app/vendor/opencv/lib/python3.6/site-packages/
+cat << EOF > .profile.d/opencv.sh
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/opencv/lib
+export PYTHONPATH=$PYTHONPATH:/app/vendor/opencv/lib/python3.6/site-packages/
 EOF
