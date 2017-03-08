@@ -14,10 +14,16 @@ mkdir -p vendor/opencv
 tar -C vendor/opencv -xf opencv.tar.gz
 rm opencv.tar.gz
 
-echo "-----> setting PATHS for opencv"
+echo "-----> Installing JPEG"
+curl https://transfer.sh/la7Vu/jpeg.tar.gz -O -s
+mkdir -p vendor/jpeg
+tar -C vendor/jpeg -xf jpeg.tar.gz
+rm jpeg.tar.gz
+
+echo "-----> setting PATHS for opencv and jpeg"
 mkdir -p .profile.d
 cat << EOF > .profile.d/opencv.sh
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/opencv/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/opencv/lib:/app/vendor/jpeg/usr/local/lib/
 export PYTHONPATH=$PYTHONPATH:/app/vendor/opencv/lib/python3.6/site-packages/
 EOF
 
